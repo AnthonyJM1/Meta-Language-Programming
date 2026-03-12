@@ -1,0 +1,15 @@
+fun length list: int = 
+    case list of
+        [] => 0
+        | x :: xs => 1 + length xs;
+    ;
+
+length [4,2,3,3];
+(* 4 *)
+
+length [10,20];
+(* 2 *)
+
+length [7];
+(* 1 *)
+
