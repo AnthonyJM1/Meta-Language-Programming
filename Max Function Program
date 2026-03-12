@@ -1,0 +1,17 @@
+fun max [x] = x
+  | max( x :: xs) =
+            let
+                val restMax = max xs
+             in
+                if x > restMax then x else restMax
+    end;
+
+max [4,2,3,3];
+(* [4] *)
+
+max [10,20];
+(* [20] *)
+
+max [7];
+(* [7] *)
+
