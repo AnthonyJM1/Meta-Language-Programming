@@ -1,0 +1,23 @@
+fun removeLast lst =
+    case lst of
+        [] => []
+        | [x] => []
+        | x :: xs => x :: removeLast xs;
+
+fun removeFirstLast lst =
+    case lst of
+        [] => []
+        | [x] => []
+        | _ :: xs => removeLast xs;
+
+removeFirstLast [1,2,3,4];
+(* [2,3] *)
+
+removeFirstLast [10,20];
+(* [] *)
+
+removeFirstLast [7];
+(* [] *)
+
+removeFirstLast [];
+(* [] *)
