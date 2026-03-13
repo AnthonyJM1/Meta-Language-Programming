@@ -1,0 +1,17 @@
+fun mult_truncate (A, B) =
+    case (A, B) of
+        ([], _) => []
+        |(_, []) => []
+        |(x::xs, y::ys) => (x*y) :: mult_truncate (xs, ys);
+
+
+mult_truncate ([1,2,3], [4,5]);
+(* [4,10] *)
+
+mult_truncate ([1,2,3], [10,20,30]);
+(* [10,40,90] *)
+
+mult_truncate([], []);
+(* [] *)
+
+
