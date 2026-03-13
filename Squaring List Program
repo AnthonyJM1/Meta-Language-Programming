@@ -1,0 +1,13 @@
+fun square_list lst =
+    let
+        fun helper [] = []
+            | helper (x::xs) = (x * x) :: helper xs
+    in
+        helper lst
+    end;
+square_list [1, 2, 3, 4];
+(* [1, 4, 9, 16] *)
+square_list [~1, ~2, ~3];
+(* [1, 4, 9] *)
+square_list [];
+(* [] *)
