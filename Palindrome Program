@@ -1,0 +1,10 @@
+fun is_palindrome lst =
+    let
+        fun reverse [] = []
+            | reverse (x::xs) = reverse xs @ [x]
+    in
+        lst = reverse lst
+    end
+
+is_palindrome [1,2,3,2,1];
+(* true *)
