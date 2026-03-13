@@ -1,0 +1,16 @@
+fun concat_lists (A, B) =
+    let
+        fun concat_helper ([], acc) = acc
+            | concat_helper (x::xs, acc) = concat_helper (xs, acc ^ " " ^ x)
+    in
+        concat_helper (A, "") ^ " " ^ concat_helper (B, "")
+    end
+
+concat_lists (["Hello", "World"], ["This", "is", "MetaLanguage"]);
+(* "Hello World This is MetaLanguage" *)
+
+concat_lists ([], ["Only", "one", "list"]);
+(* " Only one list" *)
+
+concat_lists (["Only", "one", "list"], []);
+(* "Only one list " *)
